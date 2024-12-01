@@ -1,0 +1,221 @@
+/* ==========================================================================
+   COMMON DIALOG STYLES
+   Shared styles across all dialogs
+   ========================================================================== */
+QDialog {
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2c3e50;
+}
+
+/* Common Button Styles */
+QPushButton {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+QPushButton#primaryButton {
+    background-color: #7FBDDF;
+    color: #2c3e50;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #72AAC8;
+}
+
+QPushButton#secondaryButton {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #C4D7FF;
+}
+
+/* ==========================================================================
+   HELP DIALOG
+   ========================================================================== */
+/* Tab Bar */
+QTabWidget::pane {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background: white;
+    margin-top: -1px;
+}
+
+QTabBar::tab {
+    background: #f6f9ff;
+    border: 1px solid #E0E0E0;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 8px 16px;
+    margin-right: 2px;
+    font-size: 13px;
+    color: #626364;
+}
+
+QTabBar::tab:selected {
+    background: white;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+QTabBar::tab:!selected {
+    margin-top: 3px;
+}
+
+/* Content Styling */
+QTextBrowser {
+    border: none;
+    background-color: transparent;
+    selection-background-color: #DDE8FF;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+QTextBrowser p {
+    margin: 12px 0;
+}
+
+/* Feature Lists */
+QLabel[styleClass="featureHeader"] {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 20px 0 10px 0;
+}
+
+/* Links */
+QLabel[styleClass="link"] {
+    color: #7FBDDF;
+    text-decoration: none;
+}
+
+QLabel[styleClass="link"]:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   SYSTEM INTEGRITY CONFIGURATION
+   ========================================================================== */
+QGroupBox {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 20px;
+    font-size: 13px;
+}
+
+QGroupBox::title {
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+/* Checkboxes */
+QCheckBox {
+    spacing: 8px;
+    font-size: 14px;
+    color: #2c3e50;
+    padding: 6px 0;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    background-color: white;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #7FBDDF;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #7FBDDF;
+    border-color: #7FBDDF;
+    image: url(assets/checkmark.svg);
+}
+
+/* Select All Button */
+QPushButton#selectAllButton {
+    background-color: #f6f9ff;
+    border: 1px solid #E0E0E0;
+    color: #2c3e50;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+QPushButton#selectAllButton:hover {
+    background-color: #DDE8FF;
+    border-color: #7FBDDF;
+}
+
+/* ==========================================================================
+   DEFRAGMENTATION CONFIGURATION
+   ========================================================================== */
+/* Drive Selection */
+QListWidget {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+QListWidget::item {
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 10px;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+QListWidget::item:hover {
+    background-color: #f8f9fb;
+}
+
+QListWidget::item:selected {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Drive Icons */
+QListWidget::item[drive="true"] {
+    padding-left: 35px;
+    background-image: url(assets/drive.svg);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    border: none;
+    background: #f6f9ff;
+    width: 8px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #DDE8FF;
+    min-height: 30px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C4D7FF;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}

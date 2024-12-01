@@ -1,0 +1,202 @@
+/* ==========================================================================
+   LOGS DIALOG STYLESHEET
+   Matching main window styling with specific adjustments for log display
+   ========================================================================== */
+
+/* Dialog Basics */
+QDialog {
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #4B4B4B;
+}
+
+/* Left Pane */
+QWidget#leftPane {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    min-width: 225px;
+    max-width: 225px;
+}
+
+/* Log Section Groups */
+QGroupBox#logGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+QGroupBox#logGroupBox::title {
+    color: #2c3e50;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 3px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Log List Widget */
+QListWidget#logListWidget {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    font-size: 11px;
+    color: #4B4B4B;
+    padding: 2px;
+    min-height: 120px;
+    outline: none;
+}
+
+QListWidget#logListWidget::item {
+    padding: 3px 5px;
+    border-radius: 2px;
+    min-height: 16px;
+    color: #2c3e50;
+    background-color: transparent;
+}
+
+QListWidget#logListWidget::item:hover {
+    background-color: #f8f9fb;
+}
+
+QListWidget#logListWidget::item:selected {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+QListWidget#logListWidget:focus {
+    outline: none;
+}
+
+QListWidget#logListWidget::item:focus {
+    outline: none;
+}
+
+QListWidget#logListWidget::item:selected:active {
+    background-color: #DDE8FF;
+}
+
+QListWidget#logListWidget::item:selected:!active {
+    background-color: transparent;
+}
+
+/* Log Content Viewer */
+QTextEdit#logTextViewer {
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 13px;
+    color: #626364;
+    line-height: 1.6;
+}
+
+/* Splitter Handle */
+QSplitter::handle {
+    background-color: #E0E0E0;
+    width: 1px;
+    margin: 0 8px;
+}
+
+QSplitter::handle:hover {
+    background-color: #7FBDDF;
+}
+
+/* Primary Action Buttons */
+QPushButton#primaryButton {
+    background-color: #7FBDDF;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 150px;
+    letter-spacing: 0.3px;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #72AAC8;
+}
+
+/* Secondary Action Buttons */
+QPushButton#secondaryButton {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 150px;
+    letter-spacing: 0.3px;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #C4D7FF;
+}
+
+/* Scrollbars - Vertical */
+QScrollBar:vertical {
+    border: none;
+    background: #f6f9ff;
+    width: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #DDE8FF;
+    min-height: 30px;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C4D7FF;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0;
+}
+
+/* Hide Horizontal Scrollbar */
+QScrollBar:horizontal {
+    height: 0px;
+    background: transparent;
+}
+
+QScrollBar::handle:horizontal {
+    background: transparent;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Empty State Messages */
+QListWidget#logListWidget[count="0"],
+QListWidget#logListWidget[count="1"][item0="No logs available"],
+QListWidget#logListWidget[count="1"][item0="Logs directory not found"] {
+    color: #626364;
+    font-style: italic;
+}
+
+/* Layout Adjustments */
+QVBoxLayout {
+    spacing: 5px;
+    margin: 5px;
+}
+
+QHBoxLayout {
+    spacing: 5px;
+    margin: 5px;
+}

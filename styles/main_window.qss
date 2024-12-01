@@ -1,0 +1,280 @@
+/* ==========================================================================
+   ZENCORE MAIN WINDOW STYLESHEET
+   Colors: Light theme with soft blue and green accents
+   ========================================================================== */
+
+/* ==========================================================================
+   COLOR PALETTE
+   Define all colors used throughout the application
+   ========================================================================== */
+/*
+   Background Colors:
+   - Window Background: #f6f9ff (Soft Blue)
+   - Section Background: #FFFFFF (White)
+
+   Text Colors:
+   - Primary Text: #4B4B4B (Dark Gray)
+   - Secondary Text: #626364 (Medium Gray)
+
+   Interactive Colors:
+   - Primary Button: #7FBDDF (Soft Green)
+   - Primary Hover: #72AAC8 (Lighter Green)
+   - Secondary Button: #DDE8FF (Soft Blue)
+   - Secondary Hover: #C4D7FF (Lighter Blue)
+
+   Border Colors:
+   - Primary Border: #c4c4c4 (Medium Gray)
+   - Secondary Border: #E0E0E0 (Light Gray)
+*/
+
+/* ==========================================================================
+   MAIN WINDOW CONFIGURATION
+   Basic window appearance and font settings
+   ========================================================================== */
+QMainWindow {
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #4B4B4B;
+}
+
+/* ==========================================================================
+   SECTION FRAMES
+   Individual sections within the main window (Disk Cleanup, Defrag, etc.)
+   ========================================================================== */
+QFrame#section {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
+QLabel#sectionTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   Defines the appearance of all buttons in the application
+   ========================================================================== */
+
+/* Primary Action Buttons (Start, Clean, etc.) */
+QPushButton#primaryButton {
+    background-color: #7FBDDF;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 120px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #72AAC8;
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: #72AAC8;
+}
+
+/* Secondary Action Buttons (Configure, Cancel, etc.) */
+QPushButton#secondaryButton {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 120px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #C4D7FF;
+}
+
+QPushButton#secondaryButton:pressed {
+    background-color: #C4D7FF;
+}
+
+/* Disabled Button States */
+QPushButton:disabled {
+    background-color: #f0f0f0;
+    color: #c4c4c4;
+    border: 1px solid #c4c4c4;
+}
+
+/* ==========================================================================
+   PROGRESS BAR
+   Task progress indicator
+   ========================================================================== */
+QProgressBar {
+    border: none;
+    border-radius: 3px;
+    background-color: #F5F5F5;
+    height: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+QProgressBar::chunk {
+    background-color: #A3D977;
+    border-radius: 3px;
+}
+
+/* ==========================================================================
+   INFORMATION PANEL
+   Text area for displaying status updates and information
+   ========================================================================== */
+QTextEdit#infoPanel {
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color: #626364;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   MENU BAR
+   Top application menu styling
+   ========================================================================== */
+QMenuBar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #c4c4c4;
+    min-height: 30px;
+    padding: 5px;
+}
+
+QMenuBar::item {
+    padding: 8px 20px;
+    color: #626364;
+    margin: 0 3px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QMenuBar::item:selected {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+}
+
+/* Dropdown Menu */
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+QMenu::item {
+    padding: 10px 30px;
+    color: #626364;
+}
+
+QMenu::item:selected {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #E0E0E0;
+    margin: 8px 0;
+}
+
+/* ==========================================================================
+   SCROLLBAR
+   Vertical scrollbar styling for scrollable content
+   ========================================================================== */
+QScrollBar:vertical {
+    border: none;
+    background: #f6f9ff;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #DDE8FF;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C4D7FF;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0;
+}
+
+/* ==========================================================================
+   FOOTER
+   Application footer styling
+   ========================================================================== */
+QLabel#footerLabel {
+    color: #626364;
+    font-size: 14px;
+    padding: 10px;
+    letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   GROUP BOX
+   Container styling for grouped elements
+   ========================================================================== */
+QGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 14px;
+}
+
+QGroupBox::title {
+    color: #2c3e50;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   LIST WIDGET
+   Styling for QListWidget in LogsDialog
+   ========================================================================== */
+QListWidget#logListWidget {
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color: #4B4B4B;
+}
+
+QListWidget#logListWidget::item {
+    padding: 10px 15px;
+}
+
+QListWidget#logListWidget::item:selected {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+}

@@ -1,0 +1,218 @@
+/* ==========================================================================
+   HELP DIALOG STYLESHEET
+   Matching the style of other dialogs with improved readability
+   ========================================================================== */
+
+/* Dialog Base */
+QDialog {
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #4B4B4B;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+}
+
+/* Title Section */
+QFrame#titleContainer {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+QLabel#helpTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+QLabel#helpSubtitle {
+    font-size: 14px;
+    color: #626364;
+    margin-top: 5px;
+}
+
+/* Tab Widget */
+QTabWidget#helpTabWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+}
+
+QTabWidget#helpTabWidget::pane {
+    border: 1px solid #c4c4c4;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+/* Tab Bar */
+QTabBar::tab {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    border: 1px solid #c4c4c4;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 8px 16px;
+    margin-right: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    min-width: 80px;  /* Reduced from 120px */
+    max-width: 120px; /* Added max-width */
+}
+
+QTabBar::tab:hover {
+    background-color: #C4D7FF;
+}
+
+QTabBar::tab:selected {
+    background-color: #FFFFFF;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: -1px;
+}
+
+/* Content Area */
+QLabel#helpContent {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #FFFFFF;
+}
+
+/* Headers in Content */
+.help-content h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.help-content h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 15px 0;
+    letter-spacing: 0.3px;
+}
+
+/* Content Text */
+.help-content p {
+    margin: 12px 0;
+    line-height: 1.6;
+    color: #626364;
+}
+
+.help-content p.centered {
+    text-align: center;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+/* Lists */
+.help-content ul,
+.help-content ol {
+    margin: 12px 0;
+    padding-left: 25px;
+    color: #626364;
+}
+
+.help-content li {
+    margin: 2px 0;
+    line-height: 1.6;
+}
+
+/* Support Section */
+QLabel#supportLabel {
+    font-size: 13px;
+    color: #626364;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Buttons */
+QPushButton#primaryButton {
+    background-color: #7FBDDF;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 120px;
+    letter-spacing: 0.3px;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #72AAC8;
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: #72AAC8;
+}
+
+/* Scrollbar */
+QScrollBar:vertical {
+    border: none;
+    background: #f6f9ff;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #DDE8FF;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C4D7FF;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0;
+}
+
+/* Links */
+.help-content a {
+    color: #1373b7;
+    text-decoration: none;
+}
+
+.help-content a:hover {
+    text-decoration: underline;
+}
+
+/* Strong Text */
+.help-content strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Code Blocks */
+.help-content code {
+    font-family: "Consolas", monospace;
+    background-color: #f8f9fb;
+    color: #2c3e50;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+/* Dividers */
+.help-content hr {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    margin: 20px 0;
+}

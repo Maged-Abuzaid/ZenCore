@@ -1,0 +1,178 @@
+/* ==========================================================================
+   DISK CLEANUP DIALOG STYLESHEET
+   Specific styling for disk cleanup configuration with improved checklist
+   ========================================================================== */
+
+/* Dialog Basics */
+QDialog {
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 9px;
+    color: #4B4B4B;
+}
+
+/* Drives Group */
+QGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 9px;
+}
+
+QGroupBox::title {
+    color: #2c3e50;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* Detected Drives Label */
+QLabel#detectedDrivesLabel {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Select All Button */
+QPushButton#selectAllButton {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+QPushButton#selectAllButton:hover {
+    background-color: #C4D7FF;
+}
+
+/* Checklist Area */
+QScrollArea {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+QScrollArea > QWidget > QWidget {
+    background-color: #FFFFFF;
+}
+
+/* Checkbox Items */
+QCheckBox {
+    background-color: #FFFFFF;
+    color: #2c3e50;
+    spacing: 8px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+QCheckBox:hover {
+    background-color: #f8f9fb;
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #c4c4c4;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #7FBDDF;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #7FBDDF;
+    border-color: #72AAC8;
+}
+
+/* Path Labels - Updated for better readability */
+QLabel#pathLabel {
+    color: #626364;
+    font-size: 11px;
+    padding-left: 26px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    qproperty-wordWrap: true;
+    max-width: 500px;
+    min-height: 15px;
+}
+
+/* Action Buttons */
+QPushButton#primaryButton, QPushButton#secondaryButton {
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 120px;
+    letter-spacing: 0.3px;
+    border-radius: 6px;
+}
+
+QPushButton#primaryButton {
+    background-color: #7FBDDF;
+    color: #2c3e50;
+    border: none;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #72AAC8;
+}
+
+QPushButton#secondaryButton {
+    background-color: #DDE8FF;
+    color: #2c3e50;
+    border: none;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #C4D7FF;
+}
+
+/* Scrollbar */
+QScrollBar:vertical {
+    border: none;
+    background: #f6f9ff;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #DDE8FF;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C4D7FF;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0;
+}
+
+/* Option Frame Adjustment */
+QFrame#optionFrame {
+    background-color: #FFFFFF;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    margin: 2px 0;
+    padding: 8px;
+}
+
+QFrame#optionFrame:hover {
+    background-color: #f8f9fb;
+    border-color: #e0e0e0;
+}

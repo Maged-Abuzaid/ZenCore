@@ -1,0 +1,14 @@
+/* ==========================================================================
+   ABOUT DIALOG STYLESHEET
+   Minimal styling to ensure white background while preserving existing layout
+   ========================================================================== */
+
+/* Dialog Background */
+QDialog {
+    background-color: #FFFFFF;
+}
+
+/* Group Box for Developer Info - preserve border style */
+QGroupBox {
+    background-color: #FFFFFF;
+}
